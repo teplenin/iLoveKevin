@@ -1,0 +1,83 @@
+.register {
+    margin-bottom: 50px;
+
+    &__title {
+        margin-bottom: 50px;
+
+        text-align: center;
+
+        color: $darkBlue;
+
+        font-size: 30px;
+        font-weight: bold;
+
+        @include media(lg) {
+            font-size: 36px;
+        }
+    }
+
+    &__note {
+        max-width: 840px;
+        margin: 0 auto 30px;
+
+        text-align: center;
+
+        color: $darkBlue;
+
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__form {
+        &-controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+
+            max-width: 960px;
+
+            margin: 0 auto 20px;
+
+            @include media(md) {
+                flex-direction: row;
+
+                margin-bottom: 30px;
+            }
+        }
+
+        &-control {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 10px;
+            margin-bottom: 10px;
+
+            @include media(lg) {
+                flex: 0 0 30%;
+
+                margin: 0 10px;
+            }
+        }
+
+        &-terms {
+            display: flex;
+            justify-content: center;
+
+            max-width: 300px;
+            margin: 0 auto 30px;
+
+            @include media(md) {
+                max-width: none;
+            }
+        }
+
+        &-submit {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        &-field {
+            width: 100%;
+        }
+    }
+}
