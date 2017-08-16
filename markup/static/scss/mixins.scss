@@ -40,27 +40,27 @@
 
 @mixin media($screen) {
     @if $screen == xs {
-        @media (max-width: 767px) {
+        @media (max-width: 719px) {
             @content;
         }
     }
     @else if $screen == sm {
-        @media (min-width: 768px) {
+        @media (min-width: 720px) {
             @content;
         }
     }
     @else if $screen == md {
-        @media (min-width: 992px) {
+        @media (min-width: 990px) {
             @content;
         }
     }
     @else if $screen == lg {
-        @media (min-width: 1180px) {
+        @media (min-width: 1200px) {
             @content;
         }
     }
     @else if $screen == xlg {
-        @media (min-width: 1300px) {
+        @media (min-width: 1320px) {
             @content;
         }
     }

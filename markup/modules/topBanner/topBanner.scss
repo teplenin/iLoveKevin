@@ -3,25 +3,51 @@
 
     overflow: hidden;
 
-    height: 500px;
-
     background-color: #D8D8D8;
+
+    @include media(xs) {
+        height: 400px;
+    }
+
+    @include media(sm) {
+        height: 500px;
+    }
 
     &:before {
         content: '';
 
         position: absolute;
         top: 0;
-        left: 50%;
 
         display: block;
 
         width: 1000px;
         height: 100%;
-        margin-left: -950px;
 
         background-image: url('%=staticPrefixForCss=%general/bg/topBanner.png');
         background-repeat: no-repeat;
+
+        @include media(xs) {
+            left: -450px;
+
+            opacity: .15;
+        }
+
+        @include media(sm) {
+            left: -350px;
+        }
+
+        @include media(md) {
+            left: 50%;
+
+            margin-left: -810px;
+        }
+
+        @include media(lg) {
+            left: 50%;
+
+            margin-left: -950px;
+        }
     }
 
     &__container {
@@ -37,20 +63,51 @@
     }
 
     &__title {
-        max-width: 700px;
         margin-bottom: 30px;
 
         color: $darkBlue;
 
-        font-size: 44px;
         font-weight: bold;
-        line-height: 40px;
+
+        @include media(xs) {
+            text-align: center;
+
+            font-size: 32px;
+            line-height: 30px;
+        }
+
+        @include media(sm) {
+            max-width: 360px;
+
+            font-size: 32px;
+            line-height: 30px;
+        }
+
+        @include media(lg) {
+            max-width: 700px;
+
+            font-size: 44px;
+            line-height: 40px;
+        }
     }
 
     &__text {
-        max-width: 700px;
+        @include media(xs) {
+            text-align: center;
 
-        font-size: 20px;
-        line-height: 28px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @include media(sm) {
+            max-width: 360px;
+
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        @include media(lg) {
+            max-width: 700px;
+        }
     }
 }

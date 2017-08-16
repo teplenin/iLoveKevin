@@ -49,6 +49,14 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 
+    @include media(md) {
+        width: 970px;
+    }
+
+    @include media(lg) {
+        width: 1170px;
+    }
+
     @include media(xlg) {
         width: 1290px;
     }
