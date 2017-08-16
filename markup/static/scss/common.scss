@@ -1,0 +1,44 @@
+/******************************************************
+  ICONS
+ ******************************************************/
+ .icn {
+    &:before {
+        content : '';
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &.icn-bottom:before {
+        vertical-align: bottom;
+    }
+
+    &.icn-top:before {
+        vertical-align: top;
+    }
+}
+
+/******************************************************
+  GENERAL
+ ******************************************************/
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    min-width: 300px;
+}
+
+/******************************************************
+  MAIN STYLES
+ ******************************************************/

@@ -1,0 +1,56 @@
+  $back: 248px 173px -248px -173px 10px 25px 276px 264px 'sprite.png';
+  $check: 98px 197px -98px -197px 36px 36px 276px 264px 'sprite.png';
+  $close: 248px 56px -248px -56px 24px 24px 276px 264px 'sprite.png';
+  $close_modal: 140px 120px -140px -120px 40px 40px 276px 264px 'sprite.png';
+  $collapse: 258px 173px -258px -173px 18px 10px 276px 264px 'sprite.png';
+  $hamburger: 98px 162px -98px -162px 41px 35px 276px 264px 'sprite.png';
+  $icn_check: 0px 0px 0px 0px 120px 120px 276px 264px 'sprite.png';
+  $icn_fb: 248px 28px -248px -28px 28px 28px 276px 264px 'sprite.png';
+  $icn_insta: 220px 120px -220px -120px 28px 28px 276px 264px 'sprite.png';
+  $icn_man: 0px 120px 0px -120px 98px 120px 276px 264px 'sprite.png';
+  $icn_skype: 212px 162px -212px -162px 32px 28px 276px 264px 'sprite.png';
+  $icn_speed: 120px 0px -120px 0px 128px 106px 276px 264px 'sprite.png';
+  $icn_twitter: 0px 240px 0px -240px 29px 24px 276px 264px 'sprite.png';
+  $icn_viber: 248px 0px -248px 0px 28px 28px 276px 264px 'sprite.png';
+  $icn_vk: 248px 124px -248px -124px 28px 16px 276px 264px 'sprite.png';
+  $icn_whatsapp: 194px 197px -194px -197px 29px 28px 276px 264px 'sprite.png';
+  $icn_youtube: 173px 162px -173px -162px 39px 28px 276px 264px 'sprite.png';
+  $location: 248px 140px -248px -140px 15px 21px 276px 264px 'sprite.png';
+  $minus: 164px 197px -164px -197px 30px 30px 276px 264px 'sprite.png';
+  $minus_sm: 248px 80px -248px -80px 22px 22px 276px 264px 'sprite.png';
+  $phone: 139px 162px -139px -162px 34px 34px 276px 264px 'sprite.png';
+  $phone2: 180px 120px -180px -120px 40px 40px 276px 264px 'sprite.png';
+  $plus: 134px 197px -134px -197px 30px 30px 276px 264px 'sprite.png';
+  $plus_sm: 248px 102px -248px -102px 22px 22px 276px 264px 'sprite.png';
+  $select: 248px 161px -248px -161px 22px 12px 276px 264px 'sprite.png';
+  $select_sm: 258px 183px -258px -183px 15px 8px 276px 264px 'sprite.png';
+  $zoom: 98px 120px -98px -120px 42px 42px 276px 264px 'sprite.png';
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(%=staticPrefixForCss=%png-sprite/96dpi/#{$sprite-image});
+  }
+
+  @mixin sprite-mixin-template($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    width: nth($sprite, 5);
+    height: nth($sprite, 6);
+  }
+
+  @mixin bg($sprite, $repeat: no-repeat) {
+    @include sprite-mixin-template($sprite);
+    $sprite-total-width: nth($sprite, 7);
+    $sprite-total-height: nth($sprite, 8);
+    background-size: $sprite-total-width, $sprite-total-height;
+    background-repeat: $repeat;
+
+
+
+  }
