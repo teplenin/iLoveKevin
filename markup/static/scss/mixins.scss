@@ -55,7 +55,12 @@
         }
     }
     @else if $screen == lg {
-        @media (min-width: 1230px) {
+        @media (min-width: 1180px) {
+            @content;
+        }
+    }
+    @else if $screen == xlg {
+        @media (min-width: 1300px) {
             @content;
         }
     }
