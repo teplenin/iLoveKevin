@@ -1,0 +1,48 @@
+.pluses {
+    padding-top: 100px;
+    margin-bottom: 140px;
+
+    &__title {
+        margin-bottom: 50px;
+
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+
+        color: $darkBlue;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        flex: 0 0 30%;
+        position: relative;
+
+        padding-left: 100px;
+
+        margin-bottom: 50px;
+
+        &-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &-title {
+            margin-bottom: 15px;
+
+            color: $darkBlue;
+
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        &-text {
+            font-size: 16px;
+        }
+    }
+}
