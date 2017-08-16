@@ -1,7 +1,7 @@
 {
-  "name": "quick-project",
-  "version": "1.1.9",
-  "description": "Сборщик проектов на остове TARS",
+  "name": "iLoveKevin",
+  "version": "1.0,0",
+  "description": "Верстка тестового задания",
   "author": "Dmitry Teplenin",
   "private": true,
   "dependencies": {
