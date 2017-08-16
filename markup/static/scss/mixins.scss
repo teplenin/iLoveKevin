@@ -71,3 +71,31 @@
         @include media($mediatype) {@content;}
     }
 }
+
+@mixin media-only($screen) {
+    @if $screen == xs {
+        @media (max-width: 719px) {
+            @content;
+        }
+    }
+    @else if $screen == sm {
+        @media (min-width: 720px) and (max-width: 989px) {
+            @content;
+        }
+    }
+    @else if $screen == md {
+        @media (min-width: 990px) and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @else if $screen == lg {
+        @media (min-width: 1200px) and (max-width: 1319px) {
+            @content;
+        }
+    }
+    @else if $screen == xlg {
+        @media (min-width: 1320px) {
+            @content;
+        }
+    }
+}
